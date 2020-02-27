@@ -1,5 +1,7 @@
 ## Map-Admin 简介
 
+一个基于百度地图的地理定位、位置标注、人员管理、角色权限的 Demo，提供给我敬爱的恩师 biao 使用！！！
+
 ## 前序准备
 
 你的本地环境需要安装 [node](http://nodejs.org/) 和 [git](https://git-scm.com/)。技术栈基于 [ES2015+](http://es6.ruanyifeng.com/)、[vue](https://cn.vuejs.org/index.html)、[vuex](https://vuex.vuejs.org/zh-cn/)、[vue-router](https://router.vuejs.org/zh-cn/) 、 [element-ui](https://github.com/ElemeFE/element) 和 [vue2-all](https://github.com/liuweijw/Vue2-All)
@@ -14,7 +16,7 @@
 
 ```bash
 # 克隆项目
-git clone https://github.com/liuweijw/Vue2-Admin.git
+git clone https://github.com/ChhXin/Map-Admin.git
 
 # 安装依赖
 npm install
