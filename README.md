@@ -8,7 +8,7 @@
 
 ## 数据接口准备
 
-本地仅提供了采用 mock 数据进行本地调试，但是给出了同服务端接口开发的示例!!!
+本地仅提供了采用 mock 数据进行本地调试，但是给出了同服务端接口开发的示例！！！
 
 注：去掉 mock 很容易，注释 main.js 中的 import './mock' 并删除 mock 文件夹即可
 
@@ -34,7 +34,7 @@ npm run dev
 
 ```bash
 # 构建测试环境
-npm run build:sit
+npm run build:dist
 
 # 构建生成环境
 npm run build:prod
