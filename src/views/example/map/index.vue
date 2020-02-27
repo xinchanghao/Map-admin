@@ -37,13 +37,16 @@ export default {
         document.documentElement.clientHeight ||
         document.body.clientHeight) - 85;
 
-    const redIcon = new BMap.Icon(require("./red.png"), new BMap.Size(64, 64));
+    const redIcon = new BMap.Icon(
+      require("../../../assets/red.png"),
+      new BMap.Size(64, 64)
+    );
     const yellowIcon = new BMap.Icon(
-      require("./yellow.png"),
+      require("../../../assets/yellow.png"),
       new BMap.Size(64, 64)
     );
     const greenIcon = new BMap.Icon(
-      require("./green.png"),
+      require("../../../assets/green.png"),
       new BMap.Size(64, 64)
     );
 
