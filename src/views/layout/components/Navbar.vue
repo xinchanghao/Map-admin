@@ -1,6 +1,10 @@
 <template>
   <el-menu class="navbar" mode="horizontal">
-    <hamburger class="hamburger-container" :toggleClick="toggleSideBar" :isActive="sidebar.opened"></hamburger>
+    <hamburger
+      class="hamburger-container"
+      :toggleClick="toggleSideBar"
+      :isActive="sidebar.opened"
+    ></hamburger>
 
     <breadcrumb class="breadcrumb-container"></breadcrumb>
 
@@ -15,18 +19,20 @@
 
       <el-dropdown class="picUrl-container right-menu-item" trigger="click">
         <div class="picUrl-wrapper">
-          <img class="user-picUrl" :src="picUrl+'?imageView2/1/w/80/h/80'" />
+          <img class="user-picUrl" :src="picUrl + '?imageView2/1/w/80/h/80'" />
           <i class="el-icon-caret-bottom"></i>
         </div>
         <el-dropdown-menu slot="dropdown">
           <router-link to="/">
-            <el-dropdown-item>{{$t('navbar.dashboard')}}</el-dropdown-item>
+            <el-dropdown-item>{{ $t('navbar.dashboard') }}</el-dropdown-item>
           </router-link>
           <router-link to="/modify">
-            <el-dropdown-item>{{$t('route.modify')}}</el-dropdown-item>
+            <el-dropdown-item>{{ $t('route.modify') }}</el-dropdown-item>
           </router-link>
           <el-dropdown-item divided>
-            <span @click="logout" style="display:block;">{{$t('navbar.logOut')}}</span>
+            <span @click="logout" style="display:block;">{{
+              $t('navbar.logOut')
+            }}</span>
           </el-dropdown-item>
         </el-dropdown-menu>
       </el-dropdown>
@@ -35,12 +41,12 @@
 </template>
 
 <script>
-import { mapGetters } from "vuex";
-import Breadcrumb from "@/components/Breadcrumb";
-import Hamburger from "@/components/Hamburger";
-import ErrorLog from "@/components/ErrorLog";
+import { mapGetters } from 'vuex';
+import Breadcrumb from '@/components/Breadcrumb';
+import Hamburger from '@/components/Hamburger';
+import ErrorLog from '@/components/ErrorLog';
 // import Screenfull from '@/components/Screenfull'
-import LangSelect from "@/components/LangSelect";
+import LangSelect from '@/components/LangSelect';
 
 export default {
   components: {
@@ -51,20 +57,20 @@ export default {
     LangSelect
   },
   computed: {
-    ...mapGetters(["sidebar", "name", "picUrl"])
+    ...mapGetters(['sidebar', 'name', 'picUrl'])
   },
   methods: {
     toggleSideBar() {
-      this.$store.dispatch("toggleSideBar");
+      this.$store.dispatch('toggleSideBar');
     },
     logout() {
       this.$store
-        .dispatch("LogOut")
+        .dispatch('LogOut')
         .then(() => {
           location.reload(); // In order to re-instantiate the vue-router object to avoid bugs
         })
         .catch(() => {
-          this.$store.dispatch("FedLogOut").then(() => {
+          this.$store.dispatch('FedLogOut').then(() => {
             location.reload();
           });
         });

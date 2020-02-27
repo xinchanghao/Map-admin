@@ -13,16 +13,14 @@
   </div>
 </template>
 
-
-
-
 <script>
-import { mapGetters } from "vuex";
+import { mapGetters } from 'vuex';
+import BMap from 'BMap';
 
 export default {
-  name: "dashboard",
+  name: 'dashboard',
   computed: {
-    ...mapGetters(["name", "roles"])
+    ...mapGetters(['name', 'roles'])
   },
   data() {
     return {
@@ -32,16 +30,12 @@ export default {
   mounted() {
     var geolocation = new BMap.Geolocation();
     geolocation.getCurrentPosition(function(r) {
-      if (this.getStatus() == BMAP_STATUS_SUCCESS) {
-        alert("您的经纬度位置：" + r.point.lng + "," + r.point.lat);
-      } else {
-        alert("failed" + this.getStatus());
-      }
+      alert('您的经纬度位置：' + r.point.lng + ',' + r.point.lat);
     });
   },
   methods: {
     handleClose(done) {
-      this.$confirm("确认关闭？")
+      this.$confirm('确认关闭？')
         .then(_ => {
           done();
         })
@@ -50,8 +44,6 @@ export default {
   }
 };
 </script>
-
-
 
 <style rel="stylesheet/scss" lang="scss" scoped>
 .dashboard {
@@ -64,5 +56,3 @@ export default {
   }
 }
 </style>
-
-
