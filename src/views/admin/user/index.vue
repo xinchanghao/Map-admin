@@ -267,10 +267,7 @@ export default {
       },
       editForm: {
         username: '',
-        password: '',
-        statu: '',
-        deptName: '',
-        roleId: ''
+        password: ''
       },
       editFormRules: {
         username: [
