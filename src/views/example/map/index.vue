@@ -203,7 +203,7 @@ export default {
   right: 0px;
   background: #fff;
   width: 250px;
-  height: 300px;
+  height: 150px;
   text-align: left;
   border-radius: 10px;
   box-shadow: -5px 5px 5px #ccc;
