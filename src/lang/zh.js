@@ -14,7 +14,7 @@ export default {
     menu_manage: '系统管理',
     menu_user: '用户管理',
     menu_role: '系统角色',
-    modify: '修改',
+    modify: '修改密码',
     menu_map: '用户位置',
     menu_example: '地图定位'
   },
