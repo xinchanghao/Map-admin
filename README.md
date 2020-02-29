@@ -18,6 +18,9 @@
 # 克隆项目
 git clone https://github.com/ChhXin/Map-Admin.git
 
+# 进入项目目录
+cd Map-Admin
+
 # 安装依赖
 npm install
    
