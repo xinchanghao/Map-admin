@@ -111,7 +111,7 @@ export default {
   methods: {
     handleChange(value) {
       const map = new BMap.Map('allmap', { enableMapClick: false });
-      const poin = value.filter(i => i.indexOf(',') > 0)[0].split(',');
+      const poin = value[0].split(',');
       map.centerAndZoom(new BMap.Point(poin[0], poin[1]), 11);
       map.enableScrollWheelZoom();
       map.panTo({ lng: poin[0], lat: poin[1] });

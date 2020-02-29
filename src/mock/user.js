@@ -310,107 +310,84 @@ export default {
 
 export const positionMap = [
   {
-    value: 'beijing',
-    label: '北京',
-    children: [
-      {
-        value: '116.45, 39.92',
-        label: '字节跳动科技'
-      },
-      {
-        value: '116.41, 39.96',
-        label: '单位主管'
-      }
-    ]
+    value: '116.45, 39.92',
+    label: '北京'
+    // children: [
+    //   {
+    //     value: '116.45, 39.92',
+    //     label: '字节跳动科技'
+    //   },
+    //   {
+    //     value: '116.41, 39.96',
+    //     label: '单位主管'
+    //   }
+    // ]
   },
   {
-    value: 'fujian',
-    label: '福建',
-    children: [
-      {
-        value: 'Basic',
-        label: '福州',
-        children: [
-          {
-            value: '119.31, 26.04',
-            label: '福建师范大学'
-          },
-          {
-            value: '119.29, 26.10',
-            label: '福州博物馆'
-          },
-          {
-            value: '119.20, 26.05',
-            label: '福州大学'
-          },
-          {
-            value: '119.39, 26.09',
-            label: '测试单位地址一'
-          },
-          {
-            value: '119.39, 26.11',
-            label: '测试单位地址二'
-          }
-        ]
-      },
-      {
-        value: 'Form',
-        label: '厦门',
-        children: []
-      },
-      {
-        value: 'Data',
-        label: '三明',
-        children: []
-      },
-      {
-        value: 'Notice',
-        label: '莆田',
-        children: []
-      }
-    ]
+    value: '119.31, 26.04',
+    label: '福建'
+    // children: [
+    //   {
+    //     value: 'Basic',
+    //     label: '福州',
+    //     children: [
+    //       {
+    //         value: '119.31, 26.04',
+    //         label: '福建师范大学'
+    //       },
+    //       {
+    //         value: '119.29, 26.10',
+    //         label: '福州博物馆'
+    //       },
+    //       {
+    //         value: '119.20, 26.05',
+    //         label: '福州大学'
+    //       },
+    //       {
+    //         value: '119.39, 26.09',
+    //         label: '测试单位地址一'
+    //       },
+    //       {
+    //         value: '119.39, 26.11',
+    //         label: '测试单位地址二'
+    //       }
+    //     ]
+    //   },
+    //   {
+    //     value: 'Form',
+    //     label: '厦门',
+    //     children: []
+    //   },
+    //   {
+    //     value: 'Data',
+    //     label: '三明',
+    //     children: []
+    //   },
+    //   {
+    //     value: 'Notice',
+    //     label: '莆田',
+    //     children: []
+    //   }
+    // ]
   },
   {
-    value: 'ziyuan',
-    label: '河南',
-    children: [
-      {
-        value: 'axure',
-        label: '郑州'
-      },
-      {
-        value: 'sketch',
-        label: '新乡'
-      },
-      {
-        value: 'jiaohu',
-        label: '洛阳'
-      }
-    ]
+    value: '117.21, 31.75',
+    label: '安徽'
   },
   {
-    value: 'anhui',
-    label: '安徽',
-    children: []
+    value: '113.25, 23.25',
+    label: '广东'
   },
   {
-    value: 'guangzhou',
-    label: '广州',
-    children: []
+    value: '114.56, 38.04',
+    label: '河北'
   },
   {
-    value: 'hebei',
-    label: '河北',
-    children: []
+    value: '112.54, 37.81',
+    label: '山西'
   },
   {
-    value: 'shanxi',
-    label: '山西',
-    children: []
-  },
-  {
-    value: 'sichuan',
-    label: '四川',
-    children: []
+    value: '104.11, 30.59',
+    label: '四川'
   }
 ];

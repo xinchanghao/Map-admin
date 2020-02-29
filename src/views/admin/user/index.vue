@@ -8,7 +8,14 @@
         v-model="listPageParams.username"
         @keyup.enter.native="handleSearch"
       ></el-input>
-      <el-button class="filter-item" type="primary" v-waves icon="search" @click="handleSearch()">搜索</el-button>
+      <el-button
+        class="filter-item"
+        type="primary"
+        v-waves
+        icon="search"
+        @click="handleSearch()"
+        >搜索</el-button
+      >
       <el-button
         v-if="user_add"
         class="filter-item"
@@ -17,7 +24,8 @@
         icon="edit"
         v-waves
         @click="handleAdd()"
-      >添加</el-button>
+        >添加</el-button
+      >
     </div>
     <el-table
       :key="tableKey"
@@ -82,25 +90,27 @@
                 ? 'scucess'
                 : 'danger'
             "
-          >{{ scope.row.company_status | statusFilter }}</el-tag>
+            >{{ scope.row.company_status | statusFilter }}</el-tag
+          >
         </template>
       </el-table-column>
 
       <el-table-column align="center" label="所属角色" show-overflow-tooltip>
         <template slot-scope="scope">
           <span v-for="(role, key) in scope.row.roleList" :key="key">
-            {{
-            role.roleDesc
-            }}
+            {{ role.roleDesc }}
           </span>
         </template>
       </el-table-column>
-      <el-table-column align="center" label="创建时间" sortable prop="createTime">
+      <el-table-column
+        align="center"
+        label="创建时间"
+        sortable
+        prop="createTime"
+      >
         <template slot-scope="scope">
           <span>
-            {{
-            scope.row.createTime | parseTime('{y}-{m}-{d} {h}:{i}')
-            }}
+            {{ scope.row.createTime | parseTime('{y}-{m}-{d} {h}:{i}') }}
           </span>
         </template>
       </el-table-column>
@@ -113,14 +123,16 @@
             type="success"
             @click="formEdit(scope.row)"
             v-waves
-          >编辑</el-button>
+            >编辑</el-button
+          >
           <el-button
             v-if="user_del"
             size="small"
             type="danger"
             @click="handleDelete(scope.row)"
             v-waves
-          >删除</el-button>
+            >删除</el-button
+          >
         </template>
       </el-table-column>
     </el-table>
@@ -140,30 +152,62 @@
     </div>
 
     <!-- // from dialog -->
-    <el-dialog :title="dialogTitleMap[dialogStatus]" :visible.sync="dialogFormVisible" width="40%">
-      <el-form :model="editForm" :rules="editFormRules" ref="editForm" label-width="100px">
+    <el-dialog
+      :title="dialogTitleMap[dialogStatus]"
+      :visible.sync="dialogFormVisible"
+      width="40%"
+    >
+      <el-form
+        :model="editForm"
+        :rules="editFormRules"
+        ref="editForm"
+        label-width="100px"
+      >
         <el-form-item label="用户名" prop="username">
-          <el-input v-model="editForm.username" placeholder="请输用户名"></el-input>
+          <el-input
+            v-model="editForm.username"
+            placeholder="请输用户名"
+          ></el-input>
         </el-form-item>
 
-        <el-form-item v-if="dialogStatus == 'create'" label="密码" prop="password">
-          <el-input type="password" v-model="editForm.password" placeholder="请输入密码"></el-input>
+        <el-form-item
+          v-if="dialogStatus == 'create'"
+          label="密码"
+          prop="password"
+        >
+          <el-input
+            type="password"
+            v-model="editForm.password"
+            placeholder="请输入密码"
+          ></el-input>
         </el-form-item>
 
         <el-form-item label="单位名称" prop="company_name">
-          <el-input v-model="editForm.company_name" placeholder="请输单位名称"></el-input>
+          <el-input
+            v-model="editForm.company_name"
+            placeholder="请输单位名称"
+          ></el-input>
         </el-form-item>
 
         <el-form-item label="单位主管" prop="company_bu">
-          <el-input v-model="editForm.company_bu" placeholder="请输单位主管"></el-input>
+          <el-input
+            v-model="editForm.company_bu"
+            placeholder="请输单位主管"
+          ></el-input>
         </el-form-item>
 
         <el-form-item label="单位地址" prop="company_addr">
-          <el-input v-model="editForm.company_addr" placeholder="请输单位地址"></el-input>
+          <el-input
+            v-model="editForm.company_addr"
+            placeholder="请输单位地址"
+          ></el-input>
         </el-form-item>
 
         <el-form-item label="单位经纬度" prop="company_position">
-          <el-input v-model="editForm.company_position" placeholder="请输单位经纬度"></el-input>
+          <el-input
+            v-model="editForm.company_position"
+            placeholder="请输单位经纬度"
+          ></el-input>
         </el-form-item>
 
         <el-form-item label="角色" prop="roleId">
@@ -182,9 +226,7 @@
             >
               <span style="float: left">{{ item.roleDesc }}</span>
               <span style="float: right; color: #8492a6; font-size: 13px">
-                {{
-                item.roleCode
-                }}
+                {{ item.roleCode }}
               </span>
             </el-option>
           </el-select>
@@ -221,7 +263,7 @@
             :file-list="fileList"
           >
             <el-button size="small" type="primary">点击上传</el-button>
-            <div slot="tip" class="el-upload__tip">只能上传jpg/png文件，且不超过500kb</div>
+            <div slot="tip" class="el-upload__tip">文件大小不超过10M</div>
           </el-upload>
         </el-form-item>
       </el-form>
@@ -231,8 +273,11 @@
           v-if="dialogStatus == 'create'"
           type="primary"
           @click="formCreate('editForm')"
-        >确 定</el-button>
-        <el-button v-else type="primary" @click="formUpdate('editForm')">修 改</el-button>
+          >确 定</el-button
+        >
+        <el-button v-else type="primary" @click="formUpdate('editForm')"
+          >修 改</el-button
+        >
       </div>
     </el-dialog>
   </div>
